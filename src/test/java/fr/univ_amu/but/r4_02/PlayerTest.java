@@ -9,11 +9,11 @@ public class PlayerTest {
     public static final Tick PLAYER_TICK = Tick.X;
 
 
-    private Player $player;
+    private Player player;
 
     @Before
     public void setUp() {
-        $player = new Player(PLAYER_TICK, PLAYER_NAME);
+        player = new Player(PLAYER_TICK, PLAYER_NAME);
     }
 
     @Test

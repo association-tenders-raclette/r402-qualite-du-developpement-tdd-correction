@@ -8,6 +8,10 @@ public class Field {
     }
 
 
+    /**
+     * @param tick Le tick à mettre sur le champ
+     * @return true Si le champ n'était pas déjà marqué et que le tick n'est pas null, false sinon
+     */
     public boolean tick(Tick tick) {
         return false;
     }

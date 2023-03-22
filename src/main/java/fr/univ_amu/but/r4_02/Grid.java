@@ -14,6 +14,13 @@ public class Grid {
         grid = null;
     }
 
+    /**
+     *
+     * @param position La position du champ à marquer
+     * @param tick Le tick à mettre sur le champ
+     * @throws AlreadyTickedField Si le champ est déjà marqué
+     * @throws IllegalArgumentException Si la position est hors de la grille
+     */
     public void tick(Position position, Tick tick) throws AlreadyTickedField {
 
     }

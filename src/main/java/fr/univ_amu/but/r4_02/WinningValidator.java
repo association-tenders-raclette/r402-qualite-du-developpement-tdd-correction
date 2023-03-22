@@ -9,7 +9,13 @@ public class WinningValidator {
     public WinningValidator() {
     }
 
-    public Tick validate(List<Field> $fields) throws TooManyTickOnConsecutiveFields {
+    /**
+     *
+     * @param fields Liste des champs consécutifs à vérifier
+     * @return Le Tick gagnant s'il y en a un et un seul
+     * @throws TooManyTickOnConsecutiveFields S'il y a plus d'un Tick sur les champs consécutifs
+     */
+    public Tick validate(List<Field> fields) throws TooManyTickOnConsecutiveFields {
         return null;
     }
 }
