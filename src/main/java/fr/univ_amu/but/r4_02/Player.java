@@ -11,10 +11,10 @@ public class Player {
 
 
     public Tick getTick() {
-        return null;
+        return tick;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 }

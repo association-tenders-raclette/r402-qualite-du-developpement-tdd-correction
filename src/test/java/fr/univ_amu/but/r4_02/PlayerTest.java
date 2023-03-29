@@ -3,6 +3,8 @@ package fr.univ_amu.but.r4_02;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class PlayerTest {
     public static final String PLAYER_NAME = "Player";
 
@@ -18,11 +20,11 @@ public class PlayerTest {
 
     @Test
     public void getTick() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        assertEquals(PLAYER_TICK, player.getTick());
     }
 
     @Test
     public void getName() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        assertEquals(PLAYER_NAME, player.getName());
     }
 }

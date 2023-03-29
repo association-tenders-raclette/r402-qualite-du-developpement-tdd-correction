@@ -1,5 +1,7 @@
 package fr.univ_amu.but.r4_02;
 
+import java.util.Objects;
+
 public class Position {
     private final int x;
     private final int y;
@@ -11,16 +13,19 @@ public class Position {
 
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Position position = (Position) o;
+        return x == position.x && y == position.y;
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return Objects.hash(x, y);
     }
 
     @Override
     public String toString() {
-        return "Not yet implemented";
+        return String.format("[%d,%d]", x, y);
     }
 }

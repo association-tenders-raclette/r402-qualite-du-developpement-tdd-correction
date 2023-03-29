@@ -13,14 +13,23 @@ public class Field {
      * @return true Si le champ n'était pas déjà marqué et que le tick n'est pas null, false sinon
      */
     public boolean tick(Tick tick) {
-        return false;
+        if (tick == null) {
+            return false;
+        }
+
+        if (this.tick != null) {
+            return false;
+        }
+
+        this.tick = tick;
+        return true;
     }
 
     public boolean isTicked() {
-        return false;
+        return tick != null;
     }
 
     public Tick getTick() {
-        return null;
+        return tick;
     }
 }

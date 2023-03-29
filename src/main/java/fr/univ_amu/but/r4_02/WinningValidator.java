@@ -2,7 +2,9 @@ package fr.univ_amu.but.r4_02;
 
 import fr.univ_amu.but.r4_02.exception.TooManyTickOnConsecutiveFields;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class WinningValidator {
 
@@ -16,6 +18,16 @@ public class WinningValidator {
      * @throws TooManyTickOnConsecutiveFields S'il y a plus d'un Tick sur les champs consécutifs
      */
     public Tick validate(List<Field> fields) throws TooManyTickOnConsecutiveFields {
-        return null;
+        Set<Tick> ticks = new HashSet<>();
+        for (Field field :
+                fields) {
+            ticks.add(field.getTick());
+        }
+
+        if (ticks.size() > 1) {
+            throw new TooManyTickOnConsecutiveFields();
+        }
+
+        return ticks.iterator().next();
     }
 }
